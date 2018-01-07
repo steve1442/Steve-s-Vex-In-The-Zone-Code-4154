@@ -9,6 +9,7 @@ void AutoStack()
   while(ultrasonicGet(sonar) > 8) // cancer
   {
     lift(127);
+    delay(2);
   }
   lift(30);
   secondaryLift(127);

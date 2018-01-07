@@ -27,6 +27,7 @@ void LCDDebugScreens()
   }
   lastDebugJT = debugJT;
   konamicodefunc();
+  delay(2);
 }
 
 void LCDSetUp(bool backlight, int lcds)

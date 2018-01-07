@@ -30,4 +30,5 @@ void konamicodefunc()
   lastdown = down,
   lastleft = left,
   lastright = right;
+  delay(2);
 }
