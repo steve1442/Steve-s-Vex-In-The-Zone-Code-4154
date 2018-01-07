@@ -25,6 +25,8 @@ extern "C" {
 
 #include "ImportantFunctions.h"
 
+#include "AutoStack.h"
+
 void autonomous();
 
 void initializeIO();
