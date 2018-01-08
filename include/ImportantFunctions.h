@@ -3,6 +3,9 @@
 
 void update();
 
+extern bool autostacking;
+extern int stackSize;
+
 void control();
 
 #endif

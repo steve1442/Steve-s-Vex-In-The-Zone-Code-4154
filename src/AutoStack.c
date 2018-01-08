@@ -11,18 +11,18 @@ void AutoStack()
   roller(127);
   while(grabCone > analogRead(liftSetUp.primaryLeftPot))
   {
-    primaryLiftPID(grabCone);
+    PIDDesired[0] = grabCone;
     delay(2);
   }
   while(ultrasonicGet(sonar) > 8) // cancer
   {
-    primaryLiftPID(waitUntilTop);
+    PIDDesired[0] = waitUntilTop;
     waitUntilTop++;
     delay(2);
   }
   while(analogRead(liftSetUp.secondaryLeftPot < secondaryArmPos[1]))
   {
-    secondaryLiftPID(secondaryArmPos[1]);
+    PIDDesired[1] = secondaryArmPos[1];
     delay(2);
   }
   roller(-127);
@@ -30,12 +30,13 @@ void AutoStack()
   roller(0);
   while(analogRead(liftSetUp.secondaryLeftPot > secondaryArmPos[0]))
   {
-    secondaryLiftPID(secondaryArmPos[0]);
+    PIDDesired[1] = secondaryArmPos[0];
     delay(2);
   }
   while(analogRead(liftSetUp.primaryLeftPot < grabCone))
   {
-    primaryLiftPID(grabCone);
+    PIDDesired[1] = grabCone;
     delay(2);
   }
+  autostacking = false;
 }
