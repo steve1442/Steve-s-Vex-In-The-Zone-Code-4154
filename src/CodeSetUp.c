@@ -26,6 +26,8 @@ void SensorSetUp(int driveLeftTop, int driveLeftBottom, int driveRightTop, int d
   liftSetUp.secondaryLeft = secondaryLeft;
   liftSetUp.secondaryRight = secondaryRight;
   sonar = ultrasonicInit(orange_port_number, yellow_port_number);
+  leftEnc = encoderInit(driveLeftTop, driveRightBottom, false);
+  rightEnc = encoderInit(driveRightTop, driveRightBottom, true);
 }
 
 void ControllerSetUp(int liftJT, int liftChannel, int liftAxis, int secondaryLiftJT, int secondaryLiftChannel, int secondaryLiftAxis, int mogoJT, int mogoChannel, int mogoAxis, int intakeJT, int intakeChannel,int intakeAxis)

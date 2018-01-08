@@ -50,6 +50,8 @@ struct controllerSetUp
 // 8, 7, 0, 2, 3, 0, 5, 6, 10, 0, 4, 7, 1
 void MotorSetUp(int firstLeftDrive, int secondLeftDrive, int thirdLeftDrive, int firstRightDrive, int secondRightDrive, int thirdRightDrive, int leftLift, int rightLift, int leftSecondaryLift, int rightSecondaryLift, int leftMogo, int rightMogo ,int clawroller);
 Ultrasonic sonar;
+Encoder leftEnc;
+Encoder rightEnc;
 // 0, 0, 0, 0, 0, 0, 0, 0
 void SensorSetUp(int driveLeftTop, int driveLeftBottom, int driveRightTop, int driveRightBottom, int primaryLeft, int primaryRight, int secondaryLeft, int secondaryRight, int orange_port_number, int yellow_port_number);
 // 1, 6, UPDOWN, 1, 8, UPDOWN, 1, 5, UPDOWN, 1, 7, UPDOWN

@@ -14,7 +14,7 @@ void AutoStack()
     PIDDesired[0] = grabCone;
     delay(2);
   }
-  while(ultrasonicGet(sonar) > 8) // cancer
+  while(ultrasonicGet(sonar) > 8) // Wait until for the big arm
   {
     PIDDesired[0] = waitUntilTop;
     waitUntilTop++;
