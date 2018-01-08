@@ -1,26 +1,41 @@
 #include "main.h"
 
+const int grabCone = 1000;
+
+int waitUntilTop = 1000;
+
+int secondaryArmPos[2] = {1000, 1000};
+
 void AutoStack()
 {
-  lift(-127);
   roller(127);
-  wait(200); // cancer
-  roller(75);
-  while(ultrasonicGet(sonar) > 8) // cancer
+  while(grabCone > analogRead(liftSetUp.primaryLeftPot))
   {
-    lift(127);
+    primaryLiftPID(grabCone);
     delay(2);
   }
-  lift(30);
-  secondaryLift(127);
-  wait(200); // cancer
-  secondaryLift(0);
+  while(ultrasonicGet(sonar) > 8) // cancer
+  {
+    primaryLiftPID(waitUntilTop);
+    waitUntilTop++;
+    delay(2);
+  }
+  while(analogRead(liftSetUp.secondaryLeftPot < secondaryArmPos[1]))
+  {
+    secondaryLiftPID(secondaryArmPos[1]);
+    delay(2);
+  }
   roller(-127);
-  wait(50); // cancer
+  wait(100);
   roller(0);
-  secondaryLift(-127);
-  wait(200); // cancer
-  lift(-127);
-  wait(300); // cancer
-  lift(0);
+  while(analogRead(liftSetUp.secondaryLeftPot > secondaryArmPos[0]))
+  {
+    secondaryLiftPID(secondaryArmPos[0]);
+    delay(2);
+  }
+  while(analogRead(liftSetUp.primaryLeftPot < grabCone))
+  {
+    primaryLiftPID(grabCone);
+    delay(2);
+  }
 }

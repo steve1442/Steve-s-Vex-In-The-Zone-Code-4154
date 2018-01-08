@@ -27,6 +27,8 @@ extern "C" {
 
 #include "AutoStack.h"
 
+#include "TaskStaging.h"
+
 void autonomous();
 
 void initializeIO();
