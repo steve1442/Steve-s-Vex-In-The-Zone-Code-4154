@@ -47,7 +47,7 @@ struct controllerSetUp
   mogoJT, mogoChannel, mogoAxis,
   intakeJT, intakeChannel, intakeAxis;
 }controllerSetUp;
-// 8, 7, 0, 2, 3, 0, 5, 6, 10, 0, 4, 7, 1
+// 2, 3, 0, 8, 9, 0, 5, 6, 10, 0, 4, 7, 1
 void MotorSetUp(int firstLeftDrive, int secondLeftDrive, int thirdLeftDrive, int firstRightDrive, int secondRightDrive, int thirdRightDrive, int leftLift, int rightLift, int leftSecondaryLift, int rightSecondaryLift, int leftMogo, int rightMogo ,int clawroller);
 Ultrasonic sonar;
 Encoder leftEnc;

@@ -5,7 +5,7 @@ float PIDDebug[5][3] = {
   /*Secondary Lift*/{0,0,0},
   /*LeftDrive*/     {0,0,0},
   /*RightDrive*/    {0,0,0},
-  /**/{0,0,0}};
+  /**/              {0,0,0}};
 
 int PIDDesired[5] = {0,0,0,0,0};
 
@@ -30,7 +30,7 @@ void secondaryLiftPID(int desired)
   secondaryLift(output);
   secondaryLastVal = currentVal;
 }
-
+/*
 int leftDriveLastVal = 0;
 int rightDriveLastVal = 0;
 void drivePID(int leftDesired, int rightDesired)
@@ -44,8 +44,9 @@ void drivePID(int leftDesired, int rightDesired)
   int rightCurrentVal = encoderGet(rightEnc);
   float rightError = rightDesired - rightCurrentVal;
   float rightDerivitive = rightCurrentVal - rightDriveLastVal;
-  float rightOutput = rightError + rightDerivitive;
+  float rightOutput = PIDDebug[3][0] * rightError + PIDDebug[3][2] * rightDerivitive;
   rightDriveLastVal = rightCurrentVal;
 
   drive(leftOutput, rightOutput);
 }
+*/

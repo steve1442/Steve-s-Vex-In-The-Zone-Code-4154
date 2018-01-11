@@ -12,18 +12,19 @@ int stackSize;
 
 void control()
 {
-  drive(controller(analog, 1, 4, JOY_UP), controller(analog, 1, 3, JOY_UP));
+  drive(-controller(analog, 1, 3, JOY_UP), controller(analog, 1, 2, JOY_UP));
   mogo(basicFuncControl(127, controllerSetUp.mogoJT, controllerSetUp.mogoChannel, controllerSetUp.mogoAxis));
-  if(!autostacking)
-  {
-    PIDDesired[0] = varControl(PIDDesired[0], controllerSetUp.liftJT, controllerSetUp.liftChannel, controllerSetUp.liftAxis);
-    PIDDesired[1] = varControl(PIDDesired[1], controllerSetUp.secondaryLiftJT, controllerSetUp.secondaryLiftChannel, controllerSetUp.secondaryLiftAxis);
+//  if(!autostacking)
+//  {
+    lift(basicFuncControl(127, controllerSetUp.liftJT, controllerSetUp.liftChannel, controllerSetUp.liftAxis));
+    //PIDDesired[0] = varControl(PIDDesired[0], controllerSetUp.liftJT, controllerSetUp.liftChannel, controllerSetUp.liftAxis);
+    //PIDDesired[1] = varControl(PIDDesired[1], controllerSetUp.secondaryLiftJT, controllerSetUp.secondaryLiftChannel, controllerSetUp.secondaryLiftAxis);
     roller(basicFuncControl(127, controllerSetUp.intakeJT, controllerSetUp.intakeChannel, controllerSetUp.intakeAxis));
-  }
-  if(controller(digital, 1, 7, JOY_UP))
-  {
-    autostacking = true;
-    stackSize++;
-  }
+//  }
+//  if(controller(digital, 1, 7, JOY_UP))
+//  {
+//    autostacking = true;
+//    stackSize++;
+//  }
   delay(2);
 }

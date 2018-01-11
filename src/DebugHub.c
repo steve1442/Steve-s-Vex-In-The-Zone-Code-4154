@@ -1,5 +1,13 @@
 #include "main.h"
 
+void JoyStickDebug()
+{
+	while(1)
+	{
+
+	}
+}
+
 int toggle;
 bool lastclawggle;
 int pidswitch = 0;

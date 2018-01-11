@@ -4,8 +4,8 @@ char motor[11] = {0,0,0,0,0,0,0,0,0,0,0};
 
 void lift(int pwm)
 {
-  motor[liftSetUp.primaryLeft] = pwm;
-  motor[liftSetUp.primaryRight] = pwm;
+  motor[/*liftSetUp.primaryLef*/5] = pwm;
+  motor[/*liftSetUp.primaryRight*/6] = pwm;
 }
 
 void secondaryLift(int pwm)
@@ -16,12 +16,12 @@ void secondaryLift(int pwm)
 
 void drive(int left, int right)
 {
-  motor[driveSetUp.firstLeft] = left;
-  motor[driveSetUp.secondLeft] = left;
-  motor[driveSetUp.secondLeft] = left;
-  motor[driveSetUp.firstRight] = right;
-  motor[driveSetUp.secondRight] = right;
-  motor[driveSetUp.secondRight] = right;
+  motor[/*driveSetUp.firstLeft*/3] = left;
+  motor[/*driveSetUp.secondLeft*/2] = left;
+  motor[/*driveSetUp.secondLeft*/2] = left;
+  motor[/*driveSetUp.firstRight*/8] = right;
+  motor[/*driveSetUp.secondRight*/9] = right;
+  motor[/*driveSetUp.secondRight*/9] = right;
 }
 
 void roller(int pwm)
