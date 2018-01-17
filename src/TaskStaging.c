@@ -2,7 +2,7 @@
 
 void pid()
 {
-  primaryLiftPID(PIDDesired[0]);
+  //primaryLiftPID(PIDDesired[0]);
 
-  secondaryLiftPID(PIDDesired[1]);
+  //secondaryLiftPID(PIDDesired[1]);
 }

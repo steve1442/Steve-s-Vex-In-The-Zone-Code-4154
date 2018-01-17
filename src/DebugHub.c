@@ -37,12 +37,12 @@ void debug()  // yea this was ctrl + c  ctrl + p into here, sorry its 4:38 in th
 	else if(constantswitch < 0){constantswitch = 2;}
 	if(desiredvalup){PIDDesired[pidswitch]-= 3;}
 	else if(desiredvaldown){PIDDesired[pidswitch]+= 3;}
-	lcdPrint(uart1, 1, "PID %d  D %d", pidswitch, PIDDesired[pidswitch]);
+	lcdPrint(uart2, 1, "PID %d  D %d", pidswitch, PIDDesired[pidswitch]);
 	switch(constantswitch){
-		case 0:	lcdPrint(uart1, 2, "kP %f", PIDDebug[pidswitch][0]);break;
-		case 1:	lcdPrint(uart1, 2, "kI %f", PIDDebug[pidswitch][1]);break;
-		case 2:lcdPrint(uart1, 2, "kD %f", PIDDebug[pidswitch][2]);break;
-		default:lcdPrint(uart1, 1, "PID Not found");lcdPrint(uart1, 2, "Make Better Code");break;}
+		case 0:	lcdPrint(uart2, 2, "kP %f", PIDDebug[pidswitch][0]);break;
+		case 1:	lcdPrint(uart2, 2, "kI %f", PIDDebug[pidswitch][1]);break;
+		case 2:lcdPrint(uart2, 2, "kD %f", PIDDebug[pidswitch][2]);break;
+		default:lcdPrint(uart2, 1, "PID Not found");lcdPrint(uart2, 2, "Make Better Code");break;}
 	lastpidswitchup = pidswitchup, lastpidswitchdown = pidswitchdown, lastconstswitchup = constantswitchup,	lastconstswitchdown = constantswitchdown, lastconstup = constantup,	lastconstdown = constantdown;
 	delay(2);
 	}
@@ -53,8 +53,8 @@ void DebugHub()
   bool debugHubBreak = true;
   while(debugHubBreak)
   {
-    lcdPrint(uart1, 1, "8U:PID|8D:JTCtrl");
-    lcdPrint(uart1, 2, "8L:FUN|8R:RETURN");
+    lcdPrint(uart2, 1, "8U:PID|8D:JTCtrl");
+    lcdPrint(uart2, 2, "8L:FUN|8R:RETURN");
 
     if(controller(digital, 1, 8, JOY_UP))
     {

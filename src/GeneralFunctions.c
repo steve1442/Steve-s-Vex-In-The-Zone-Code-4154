@@ -10,8 +10,8 @@ void lift(int pwm)
 
 void secondaryLift(int pwm)
 {
-  motor[liftSetUp.secondaryLeft] = pwm;
-  motor[liftSetUp.secondaryRight] = pwm;
+  motor[10] = pwm;
+  //motor[liftSetUp.secondaryRight] = pwm;
 }
 
 void drive(int left, int right)

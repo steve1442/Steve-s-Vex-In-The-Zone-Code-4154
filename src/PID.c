@@ -3,8 +3,8 @@
 float PIDDebug[5][3] = {
   /*Primary Lift*/  {0,0,0},
   /*Secondary Lift*/{0,0,0},
-  /*LeftDrive*/     {0,0,0},
-  /*RightDrive*/    {0,0,0},
+  /*LeftDrive*/     {0.1,0,0},
+  /*RightDrive*/    {0.1,0,0},
   /**/              {0,0,0}};
 
 int PIDDesired[5] = {0,0,0,0,0};

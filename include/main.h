@@ -8,7 +8,7 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-
+extern int leftime, rightime;
 #include "CodeSetUp.h"
 
 #include "GeneralFunctions.h"
@@ -28,6 +28,8 @@ extern "C" {
 #include "AutoStack.h"
 
 #include "TaskStaging.h"
+
+void distanceDrivePID(int Desired, int distance);
 
 void autonomous();
 
