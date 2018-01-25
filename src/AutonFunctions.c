@@ -25,3 +25,19 @@ void distanceDrivePID(int Desired, int distance)
 
   drive(leftOutput, rightOutput);
 }
+
+// ITS THIS FILE BTW, THIS ONE THISSSSSSSSSSSS ONEEEEEEEEEE alessandro this is the file. not the other ones
+// u have spent 5 minutes looking at trying to find where the fuck i put the gyro code
+
+
+
+void gyroTurn(int desired, int fuckhim) // fuck alessandro he wants this function to fucking work
+{
+  int alessandrosucks = desired - gyroGet(gyro);
+  drive(alessandrosucks, alessandrosucks); // if the code does like some spin manuver
+  // JUST FUCKING RUN
+  // dont really
+  // if it starts to spin then put a negative on both the alessandrosucks k?
+  // can u do that?
+  // good
+}

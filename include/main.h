@@ -8,6 +8,7 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+Gyro gyro;
 extern int leftime, rightime;
 #include "CodeSetUp.h"
 

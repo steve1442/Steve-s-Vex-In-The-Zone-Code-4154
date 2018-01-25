@@ -6,6 +6,7 @@ void initializeIO() {
 
 int leftime, rightime;
 void initialize() {
+  gyroInit(6, 1);
   imeInitializeAll ();
   LCDSetUp(true, 1);
   MotorSetUp(2, 3, 0, 8, 9, 0, 5, 6, 10, 0, 4, 7, 1);
