@@ -126,28 +126,30 @@ drive(0,0);
 taskDelete(UPDATE);
 */
 
-
-void autonomous() {
-
-switch(auton)
+void autonomous()
 {
-  case 0:
-  auton0();//  blue 20
-  break;
-  case 1:
-  auton1();// blue 10
-  break;
-  case 2:
-  auton2(); // red 20
-  break;
-  case 3:
-  auton3();// red 10
-  break;
-  case 4:
-  auton4();// skillz. whatever those are
-  break;
-  default:
-  // absolutely nothingg :)))))))))))))
-  break;
-}
+  auton2();
+  /*
+  switch(auton)
+  {
+    case 0:
+    auton0();//  blue 20
+    break;
+    case 1:
+    auton1();// blue 10
+    break;
+    case 2:
+    auton2(); // red 20
+    break;
+    case 3:
+    auton3();// red 10
+    break;
+    case 4:
+    auton4();// skillz. whatever those are
+    break;
+    default:
+    // absolutely nothingg :)))))))))))))
+    break;
+  }
+  */
 }
