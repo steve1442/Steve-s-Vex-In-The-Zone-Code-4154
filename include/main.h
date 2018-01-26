@@ -30,6 +30,10 @@ extern int leftime, rightime;
 
 #include "TaskStaging.h"
 
+extern int auton;
+
+void autonselect();
+
 void distanceDrivePID(int Desired, int distance);
 
 void autonomous();

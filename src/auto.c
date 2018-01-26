@@ -1,8 +1,18 @@
 
 #include "main.h"
 
-void autonomous() {
+void auton0()
+{
 
+}
+
+void auton1()
+{
+
+}
+
+void auton2()
+{
   TaskHandle UPDATE = taskRunLoop(update, 10);
   imeReset(1);
   imeReset(0);
@@ -19,7 +29,7 @@ void autonomous() {
   mogo(0);
   while(1500 > leftime){
     lcdPrint(uart2, 1, "works");
-  drive(-127, 127);}
+    drive(-127, 127);}
   drive(0,0);
   imeReset(1);
   imeReset(0);
@@ -30,7 +40,7 @@ void autonomous() {
   wait(700);
   roller(0);
   while(1400 > -leftime){lcdPrint(uart2, 1, "works");
-  drive(127, -50);}
+    drive(127, -50);}
   drive(0,0);
   imeReset(1);
   imeReset(0);
@@ -41,7 +51,7 @@ void autonomous() {
   imeReset(0);
   while(900 > leftime){
     lcdPrint(uart2, 1, "works");
-  drive(-127, 127);}
+    drive(-127, 127);}
   drive(0,0);
   mogo(-127);
   wait(700);
@@ -53,7 +63,17 @@ void autonomous() {
   mogo(0);
   drive(0,0);
   taskDelete(UPDATE);
+}
 
+void auton3()
+{
+
+}
+
+void auton4()
+{
+
+}
 /*TaskHandle UPDATE = taskRunLoop(update, 10);
 imeReset(1);
 imeReset(0);
@@ -69,7 +89,7 @@ wait(2000);
 secondaryLift(0);
 mogo(0);
 while(1500 > leftime){
-  lcdPrint(uart2, 1, "works");
+lcdPrint(uart2, 1, "works");
 drive(-127, 127);}
 drive(0,0);
 imeReset(1);
@@ -91,7 +111,7 @@ drive(0,0);
 imeReset(1);
 imeReset(0);
 while(900 > leftime){
-  lcdPrint(uart2, 1, "works");
+lcdPrint(uart2, 1, "works");
 drive(-127, 127);}
 drive(0,0);
 mogo(-127);
@@ -105,4 +125,29 @@ mogo(0);
 drive(0,0);
 taskDelete(UPDATE);
 */
+
+
+void autonomous() {
+
+switch(auton)
+{
+  case 0:
+  auton0();//  blue 20
+  break;
+  case 1:
+  auton1();// blue 10
+  break;
+  case 2:
+  auton2(); // red 20
+  break;
+  case 3:
+  auton3();// red 10
+  break;
+  case 4:
+  auton4();// skillz. whatever those are
+  break;
+  default:
+  // absolutely nothingg :)))))))))))))
+  break;
+}
 }
