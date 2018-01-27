@@ -49,7 +49,7 @@ void auton2()
   drive(0,0);
   imeReset(1);
   imeReset(0);
-  while(900 > leftime){
+  while(900 > leftime){ // this is it
     lcdPrint(uart2, 1, "works");
     drive(-127, 127);}
   drive(0,0);
@@ -128,8 +128,6 @@ taskDelete(UPDATE);
 
 void autonomous()
 {
-  auton2();
-  /*
   switch(auton)
   {
     case 0:
@@ -151,5 +149,4 @@ void autonomous()
     // absolutely nothingg :)))))))))))))
     break;
   }
-  */
 }
